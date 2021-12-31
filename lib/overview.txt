@@ -1,0 +1,31 @@
+Link : https://devmuaz.medium.com/flutter-clean-architecture-series-part-1-d2d4c2e75c47
+
+Data Layer -
+
+- Databases, Models, Serilization/Deserialization
+- Data Layer will inherit all the Abstractions
+- Indirectly we are telling data layer that what kind of classes will it have
+- Data layer will depend on Domain layer
+
+
+Presentation Layer -
+
+- Blocs and UI
+- Depends on Domain Layer beacuse of BLOC using usecases
+
+
+Domain Layer - 
+
+- Abstractions
+- Independent
+- Both Presentation and Data layers depending on this layer, 
+since the Data Layer will implement what ever contracts written here.. 
+and the Presentation Layer will use those contracts with the implementations 
+to be used as an injected dependencies.
+- Keep in mind that the Presentation Layer will only get data as entities and not models
+
+
+Use Cases in Domain Layer -
+
+- getting articles, post data, signing in, …etc
+
